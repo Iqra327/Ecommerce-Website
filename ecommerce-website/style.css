@@ -1,0 +1,37 @@
+*{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.logo{
+  height: 50px;
+}
+
+.nav-link{
+  /* font-size: 20px; */
+  color: rgb(252, 252, 252) !important;
+  /* font-weight: bolder;
+  display: inline-block; */
+}
+
+.navbar{
+  background-color: rgb(28, 189, 138);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  bottom: 8px; /* Position the underline slightly below the text */
+  width: 80%;
+  height: 2px; /* Thickness of the underline */
+  background-color: #138a46; /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: left center;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-link:hover::after , .nav-link:hover{
+  transform: scaleX(1); /* Expand the underline on hover */
+  color: #138a46 !important;
+  transition: color 0.2s ease;
+}
