@@ -116,6 +116,11 @@ background-size: 100% calc(2vw + 90px);
   height: 40px;
 }
 
+.add-to-cart-btn{
+  width: 100%;
+  max-width: 150px;
+}
+
 footer{
   background-color: rgb(7, 142, 99);
 }
