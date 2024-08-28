@@ -16,10 +16,7 @@ body{
 }
 
 .nav-link{
-  /* font-size: 20px; */
   color: rgb(252, 252, 252) !important;
-  /* font-weight: bolder;
-  display: inline-block; */
 }
 
 .navbar{
@@ -30,13 +27,13 @@ body{
   content: '';
   position: absolute;
   left: 8px;
-  bottom: 8px; /* Position the underline slightly below the text */
+  bottom: 8px;
   width: 80%;
-  height: 2px; /* Thickness of the underline */
-  background-color: #138a46; /* Color of the underline */
+  height: 2px; 
+  background-color: #138a46; 
   transform: scaleX(0); /* Initially hide the underline */
   transform-origin: left center;
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease;
 }
 
 .nav-link:hover::after , .nav-link:hover{
@@ -72,6 +69,7 @@ body{
 overflow:hidden;
 position:relative;
 }
+
 .shapedividers_com-7260::before{ 
 content:'';
 font-family:'shape divider from ShapeDividers.com';
@@ -107,4 +105,32 @@ background-size: 100% calc(2vw + 90px);
   border-radius: 100% 0 0 0;
   bottom: 0%;
   right: 0%;
+}
+
+.person-with-gadgets {
+  width: 100%;
+  max-width: 400px;
+}
+
+.numbering-qualities-section{
+  background-color: rgb(144, 238, 144, 0.5);
+  width: 40px;
+  height: 40px;
+}
+
+/* Reordering the columns on smaller screens */
+@media (max-width: 990px) {
+  .reorder-image-first {
+    order: -1; /* Moves the image column to the first position */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .why-choose-col-first{
+    text-align: start !important;
+  }  
+
+  .numbering-qualities-section{
+    margin-right: 480px;
+  }
 }
