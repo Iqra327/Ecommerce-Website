@@ -166,7 +166,7 @@
    <!-- product template section -->
     <template class="js-product-template">
       <div class="col-lg-4 col-md-6 col-sm-12 p-5">
-        <div class="card  h-100">
+        <div class="card js-card h-100">
           <span class="category js-category ps-3 pe-3 mx-2 my-4"></span>
           <img class="card-img-top js-product-image" src="" alt="">
           
@@ -194,11 +194,13 @@
           
             <div class="d-flex">
               <p class="me-3">Quantity(Pieces)</p>
-              <div class="d-flex gap-3 justify-content-center align-items-center stockElement">
-                <button class="border-0 bg-transparent fw-bold">+</button>
-                <p class="mt-3 fw-bold">1</p>
-                <button class="border-0 bg-transparent fw-bold">-</button>
+              
+              <div class="d-flex gap-3 justify-content-center align-items-center js-stock-element stockElement">
+                <button class="border-0 bg-transparent fw-bold js-quantity-increment">+</button>
+                <p class="mt-3 fw-bold js-product-quantity">1</p>
+                <button class="border-0 bg-transparent fw-bold js-quantity-decrement">-</button>
               </div>
+            
             </div>
             <a href="#" class="btn btn-success text-white mt-2 add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</a>
           </div>

@@ -1,8 +1,11 @@
+import { homeProductQuantity } from "./homeProductQuantity.js";
+
 const productContainer = document.querySelector('.js-product-container');
 const productTemplate = document.querySelector('.js-product-template');
 
 // function to show products
 export function showProducts(products){
+  
   if(!products){
     return false;
   }
@@ -12,7 +15,9 @@ export function showProducts(products){
 
     const productClone = document.importNode(productTemplate.content, true);
 
-    productClone.querySelector('.js-product-name').innerText = name;
+    productClone.querySelector('.js-card').setAttribute('id', `card${id}`);
+
+    productClone.querySelector('.js-product-name').innerText = name;   
     productClone.querySelector('.js-category').innerText = category;
     productClone.querySelector('.js-product-image').src = image;
     productClone.querySelector('.js-product-image').alt = name;
@@ -21,7 +26,10 @@ export function showProducts(products){
     productClone.querySelector('.js-product-price').innerText = `RS ${price}`;
     productClone.querySelector('.js-product-actual-price').innerText = `RS ${price * 4}`;
 
+    productClone.querySelector('.js-stock-element').addEventListener('click' ,(event) => {
+      homeProductQuantity(event, id, stock);
+    });
+
     productContainer.append(productClone);
   });
-
 };
