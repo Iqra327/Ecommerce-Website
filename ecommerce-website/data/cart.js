@@ -1,6 +1,22 @@
-export function addToCart(event, id, stock){
+let cart = [];
+function loadFromStorage(){
+  cart = JSON.parse(localStorage.getItem('cart')) || [];
+  updateCartQuantity(cart);
+};
+
+function saveToStorage(){
+  localStorage.setItem('cart', JSON.stringify(cart));
+};
+
+function updateCartQuantity(cart){
+  let cartQuantity = cart.length;
   
-  loadFromStorage(); 
+  document.querySelector('.js-cart-quantity').innerHTML = `<i class="fa-solid fa-cart-shopping"> ${cartQuantity}</i>`;
+};
+
+loadFromStorage(); 
+
+export function addToCart(event, id, stock){
 
   const currentProductElement = document.querySelector
   (`#card${id}`);
@@ -16,7 +32,6 @@ export function addToCart(event, id, stock){
 
   let totalPrice = price * quantity;
 
-
   cart.push({
     id : id,
     price : totalPrice, 
@@ -24,14 +39,5 @@ export function addToCart(event, id, stock){
   });
 
   saveToStorage();
- 
-};
-
-function saveToStorage(){
-  localStorage.setItem('cart', JSON.stringify(cart));
-};
-
-let cart = [];
-function loadFromStorage(){
-  cart = JSON.parse(localStorage.getItem('cart')) || [];
+  updateCartQuantity(cart);
 };
