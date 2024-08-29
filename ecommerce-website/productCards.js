@@ -1,3 +1,4 @@
+import { addToCart } from "./data/cart.js";
 import { homeProductQuantity } from "./homeProductQuantity.js";
 
 const productContainer = document.querySelector('.js-product-container');
@@ -30,6 +31,10 @@ export function showProducts(products){
       homeProductQuantity(event, id, stock);
     });
 
+    productClone.querySelector('.js-add-to-cart-btn').addEventListener('click', (event) => {
+      addToCart(event, id, stock);
+    })
+  
     productContainer.append(productClone);
   });
 };
