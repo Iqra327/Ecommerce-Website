@@ -1,10 +1,11 @@
 let cart = [];
-function loadFromStorage(){
+
+export function loadFromStorage(){
   cart = JSON.parse(localStorage.getItem('cart')) || [];
   updateCartQuantity(cart);
 };
 
-function saveToStorage(){
+export function saveToStorage(){
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 
@@ -30,13 +31,20 @@ export function addToCart(event, id, stock){
 
   quantity = Number(quantity);
 
+  let existingProduct = cart.find(currProd => currProd.id === id);
+
   let totalPrice = price * quantity;
 
-  cart.push({
-    id : id,
-    price : totalPrice, 
-    quantity : quantity
-  });
+  if(existingProduct){
+    existingProduct.quantity += quantity;
+    existingProduct.price +=  price * quantity;
+  }else{
+    cart.push({ 
+      id : id,
+      price : totalPrice, 
+      quantity : quantity
+    });
+  }
 
   saveToStorage();
   updateCartQuantity(cart);
