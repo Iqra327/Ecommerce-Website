@@ -1,0 +1,1 @@
+import { loadFromStorage } from "../data/cart";
