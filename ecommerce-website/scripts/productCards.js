@@ -12,7 +12,7 @@ export function showProducts(products){
   }
 
   products.forEach(productElem => {
-    const { id, name, category, brand, price, stock, description , image} = productElem;
+    const { id, name, category, price, stock, description , image} = productElem;
 
     const productClone = document.importNode(productTemplate.content, true);
 

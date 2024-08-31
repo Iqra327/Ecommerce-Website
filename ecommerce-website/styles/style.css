@@ -66,6 +66,7 @@ body{
 .shapedividers_com-7260{
 overflow:hidden;
 position:relative;
+width: 100%;
 }
 
 .shapedividers_com-7260::before{ 
