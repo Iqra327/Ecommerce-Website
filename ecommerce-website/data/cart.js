@@ -37,7 +37,6 @@ export function addToCart(event, id, stock){
 
 export function loadFromStorage(){
   cart = JSON.parse(localStorage.getItem('cart')) || [];
-
   updateCartQuantity(cart);
 };
 
@@ -50,7 +49,7 @@ export function removeFromCart(productId){
   saveToStorage();
 }
 
-function updateCartQuantity(cart){
+export function updateCartQuantity(cart){
   let cartQuantity = cart.length;
   
   document.querySelector('.js-cart-quantity').innerHTML = `
