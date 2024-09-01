@@ -28,6 +28,8 @@ button{
   background-color: rgb(21, 137, 137);
   font-size: 18px;
   letter-spacing: 2px;
+  width: 100%;
+  max-width: 120px;
   transition: all 0.2s ease;
 }
 
