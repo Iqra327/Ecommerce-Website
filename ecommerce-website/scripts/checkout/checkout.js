@@ -1,5 +1,7 @@
-import { loadFromStorage, cart, saveToStorage, removeFromCart} from '../data/cart';
-import products from '../api/products.json';
+import { loadFromStorage, cart, saveToStorage, removeFromCart} from '../../data/cart';
+import products from '../../api/products.json';
+import { orderSummary } from './orderSummary';
+import { showToast } from '../toast';
 
 loadFromStorage();
 
@@ -62,7 +64,9 @@ document.querySelectorAll('.js-remove-btn').forEach((btn) => {
    
     const currentDiv = document.querySelector(`.js-ordered-product-${productId}`);
     currentDiv.remove();
-   
+
+    showToast("delete");
+    orderSummary();
     loadFromStorage();
   })
 });
@@ -110,6 +114,7 @@ function incrementDecrement(event) {
   stockElement.closest('.product-row').querySelector('.js-price').innerText = localStoragePrice;
 
   saveToStorage();
+  orderSummary();
 }
 
 document.querySelectorAll('.js-stock-element').forEach((element) => {
@@ -117,3 +122,5 @@ document.querySelectorAll('.js-stock-element').forEach((element) => {
     incrementDecrement(event);
   });
 });
+
+orderSummary();

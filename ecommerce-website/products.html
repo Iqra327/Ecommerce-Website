@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+  <header class="js-header">
+    <script src="scripts/header&footer/header.js"></script>
+  </header>
+
+  <!-- few products section -->
+   <div class="container mt-5 ">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 bg-white d-flex justify-content-center align-items-center p-5 position-relative overflow-hidden">
+        <div>
+          <p>New Year Sale</p>
+          <h4>Get And Extra 50% Off</h4>
+          <a href="" class="text-decoration-none">Shop Now</a>
+        </div>
+        <div>
+          <figure>
+            <img class="product-image" src="images/laptop.png" alt="product-image">
+          </figure>
+          <div class="half-circle position-absolute"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 bg-white d-flex justify-content-center align-items-center p-5 position-relative overflow-hidden">
+        <div>
+          <p>New Year Sale</p>
+          <h4>40% Discount On Speakers</h4>
+          <a href="" class="text-decoration-none">Shop Now</a>
+        </div>
+        <div>
+          <figure>
+            <img class="product-image" src="images/headphoneEcom.png" alt="product-image">
+          </figure>
+          <div class="half-circle position-absolute"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 bg-white d-flex justify-content-center align-items-center p-5 position-relative overflow-hidden">
+        <div class="">
+          <p>New Year Sale</p>
+          <h4>Get And Extra 50% Off</h4>
+          <a href="" class="text-decoration-none">Shop Now</a>
+        </div>
+        <div>
+          <figure>
+            <img class="product-image" src="images/mobiles.png" alt="product-image">
+          </figure>
+          <div class="half-circle position-absolute"></div>
+        </div>
+      </div>
+    </div>
+   </div>
+  
+   <!-- policy-section -->
+   <div class="container mt-3 bg-white">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center p-4">
+        <div>
+          <i class="fa-solid fa-truck-fast fa-2xl p-3" style="color:rgb(21, 164, 106)"></i>
+        </div>
+        <div>
+          <p class="m-0">Worldwide Shipping</p>
+          <small class="m-0 opacity-75">Order Above $100</small>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center p-4">
+        <div>
+          <i class="fa-solid fa-arrows-rotate fa-2xl p-3" style="color:rgb(21, 164, 106)"></i>
+        </div>
+        <div>
+          <p class="m-0">Easy 30 Day Returns</p>
+          <small class="m-0 opacity-75">Back Return in 7 Days</small>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center p-4">
+        <div>
+          <i class="fa-solid fa-hand-holding-dollar fa-2xl p-3" style="color:rgb(21, 164, 106)"></i>
+        </div>
+        <div>
+          <p class="m-0">Money Back Guarantee</p>
+          <small class="m-0 opacity-75">Guarantee With in 30-Days</small>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center p-4">
+        <div>
+          <i class="fa-solid fa-headset fa-2xl p-3" style="color:rgb(21, 164, 106)"></i>
+        </div>
+        <div>
+          <p class="m-0">Easy Online Support</p>
+          <small class="m-0 opacity-75">24/7 Any Time Support</small>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Products Section -->
+   <div class="container mt-5">
+    <h3 class="fw-bold">Checkout E-Store</h3>
+    <div class="row js-product-container"></div>
+  </div>
+
+   <!-- product template section -->
+    <template class="js-product-template">
+      <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+        <div class="card js-card h-100">
+          <span class="category js-category ps-3 pe-3 mx-2 my-4"></span>
+          <img class="card-img-top js-product-image" src="" alt="">
+          
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title js-product-name fw-bold"></h5>
+          
+            <div>
+              <i class="fa-solid fa-star fa-2xs text-warning"></i>
+              <i class="fa-solid fa-star fa-2xs text-warning"></i>
+              <i class="fa-solid fa-star fa-2xs text-warning"></i>
+              <i class="fa-solid fa-star fa-2xs text-warning"></i>
+              <i class="fa-solid fa-star fa-2xs text-warning"></i>
+            </div>
+            <p class="card-text js-product-description"></p>
+          
+            <div class="d-flex">
+              <p class="me-3 js-product-price"></p>
+              <p class="text-decoration-line-through js-product-actual-price"></p>
+            </div>
+          
+            <div class="d-flex">
+              <p class="me-3">Total Stocks Available:</p>
+              <p class="js-product-stock">50</p>
+            </div>
+          
+            <div class="d-flex">
+              <p class="me-3">Quantity(Pieces)</p>
+              
+              <div class="d-flex gap-3 justify-content-center align-items-center js-stock-element stockElement">
+                <button class="border-0 bg-transparent fw-bold js-quantity-increment">+</button>
+                <p class="mt-3 fw-bold js-product-quantity">1</p>
+                <button class="border-0 bg-transparent fw-bold js-quantity-decrement">-</button>
+              </div>
+            
+            </div>
+            <a href="#" class="btn btn-success text-white mt-2 add-to-cart-btn js-add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add To Cart</a>
+          </div>
+        </div>
+      </div>
+    </template>
+    
+    <!-- Footer -->
+    <footer class="js-footer">
+      <script src="scripts/header&footer/footer.js"></script>
+     </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
