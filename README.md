@@ -5,7 +5,7 @@ An e-commerce website where users can browse and add products to the cart, manag
 This project was developed using HTML, CSS, JavaScript, and Vite. It is deployed on Vercel.
 
 <h3>Live Demo</h3>
-Check out the live version of the project:  ecommerce-website-two-sooty.vercel.app.
+Check out the live version of the project: https://ecommerce-website-two-sooty.vercel.app .
 
 <h3>Features</h3>
 Product Listing: View a list of products with details such as name, category, price, and stock.<br><br>
