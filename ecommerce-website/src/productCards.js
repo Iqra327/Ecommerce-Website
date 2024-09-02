@@ -1,5 +1,5 @@
 import { addToCart } from "../data/cart.js";
-import { orderSummary } from "./checkout/orderSummary.js";
+import { orderSummary } from "./orderSummary.js";
 import { homeProductQuantity } from "./homeProductQuantity.js";
 import { showToast } from "./toast.js";
 

@@ -1,4 +1,4 @@
-import { cart} from "../../data/cart";
+import { cart} from "../data/cart";
 
 export function orderSummary(){
   let subTotalPrice = cart.reduce((accum, element)=> { 

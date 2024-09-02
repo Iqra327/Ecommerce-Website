@@ -1,7 +1,7 @@
-import { loadFromStorage, cart, saveToStorage, removeFromCart} from '../../data/cart';
-import products from '../../api/products.json';
+import { loadFromStorage, cart, saveToStorage, removeFromCart} from '../data/cart';
+import products from '../api/products.json';
 import { orderSummary } from './orderSummary';
-import { showToast } from '../toast';
+import { showToast } from './toast';
 
 loadFromStorage();
 
@@ -89,6 +89,7 @@ function incrementDecrement(event) {
   if(event.target.classList.contains('js-quantity-increment')){
     if(quantity < stock){
       quantity++;
+      showToast("add");
     }else if(quantity === stock){
       quantity = stock;
       localStoragePrice = price * stock;
@@ -98,6 +99,7 @@ function incrementDecrement(event) {
   if(event.target.classList.contains('js-quantity-decrement')){
     if(quantity > 1){
       quantity--;
+      showToast("delete");
     }
   }
 
