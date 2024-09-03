@@ -41,7 +41,7 @@ Vite: For building and bundling the project.<br>
     npm run dev<br><br>
   </li>
   <li>
-    Open http://localhost:3000 in your browser to view the application.<br>
+    Open http://localhost:5173 in your browser to view the application.<br>
   </li>
 </ul>
 
